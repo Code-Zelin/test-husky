@@ -2,6 +2,14 @@
   "name": "test-husky",
   "version": "0.1.0",
   "private": true,
+  "husky": {
+    "hooks": {
+      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
+      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
+      "post-applypatch": "echo \"[Husky] post-applypatch\"",
+      "pre-commit": "echo \"[Husky] pre-commit\""
+    }
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -11,6 +19,7 @@
   "dependencies": {
     "eslint": "8.27.0",
     "eslint-config-next": "13.0.4",
+    "husky": "^8.0.2",
     "next": "13.0.4",
     "react": "18.2.0",
     "react-dom": "18.2.0"
