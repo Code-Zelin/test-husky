@@ -2,19 +2,12 @@
   "name": "test-husky",
   "version": "0.1.0",
   "private": true,
-  "husky": {
-    "hooks": {
-      "applypatch-msg": "echo \"[Husky] applypatch-msg\"",
-      "pre-applypatch": "echo \"[Husky] pre-applypatch\"",
-      "post-applypatch": "echo \"[Husky] post-applypatch\"",
-      "pre-commit": "echo \"[Husky] pre-commit\""
-    }
-  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint",
+    "lint": "prettier --check .",
+    "format": "git add . && prettier --write .",
     "prepare": "husky install"
   },
   "dependencies": {
@@ -26,6 +19,7 @@
     "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "husky": "^8.0.0"
+    "husky": "^8.0.0",
+    "prettier": "^2.7.1"
   }
 }
